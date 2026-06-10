@@ -108,7 +108,6 @@ class PhysicsObject {
     let totalForce = new PhysicsForce(0, this.position, 0);
 
     this.forces["gravity"] = new PhysicsForce(9.8 * this.mass, this.position, 270);
-    this.forces["right"] = new PhysicsForce(2 * this.mass, this.position, 0);
     Object.values(this.forces).forEach(force => {
       totalForce = totalForce.add(force);
     });
